@@ -50,13 +50,13 @@ You can install Postman via this website: https://www.postman.com/downloads/
 ## Mandatory Checklists (Publisher)
 -   [ ] Clone https://gitlab.com/ichlaffterlalu/bambangshop to a new repository.
 -   **STAGE 1: Implement models and repositories**
-    -   [ ] Commit: `Create Subscriber model struct.`
-    -   [ ] Commit: `Create Notification model struct.`
-    -   [ ] Commit: `Create Subscriber database and Subscriber repository struct skeleton.`
-    -   [ ] Commit: `Implement add function in Subscriber repository.`
-    -   [ ] Commit: `Implement list_all function in Subscriber repository.`
-    -   [ ] Commit: `Implement delete function in Subscriber repository.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
+    -   [X] Commit: `Create Subscriber model struct.`
+    -   [X] Commit: `Create Notification model struct.`
+    -   [X] Commit: `Create Subscriber database and Subscriber repository struct skeleton.`
+    -   [X] Commit: `Implement add function in Subscriber repository.`
+    -   [X] Commit: `Implement list_all function in Subscriber repository.`
+    -   [X] Commit: `Implement delete function in Subscriber repository.`
+    -   [X] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
     -   [ ] Commit: `Create Notification service struct skeleton.`
     -   [ ] Commit: `Implement subscribe function in Notification service.`
@@ -77,6 +77,11 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. As for now, I see that there is no need to use an interface or 'trait in this case because we are using rust. This is because I didn't see any other struct that behaves like subscriber did, so I don't think BambangShop needs an interface or 'trait' for the Subscriber, we can use an interface or trait if we wanted to use different implementations for subscribers, for example if we wanted to change the notifactions that are sent we can just simply make this a trait for different use cases of the interface/trait subscribers.
+
+2. In my understanding, DashMap acts like Map in python and HashMap in Java, being so, it is more convinient to use DashMap to store items that have some sort of a primary key, we can use a vec/list, but the program needs to iterate the whole lists to check for duplicates but with DashMap, we can check if an item that has a specific key already exists or not.
+
+3. After doing some googling about singleton especially in rust, I found that many people thinks that singletons aren't generally a good design practice because it is hard to do unit test properly with it. So, eventhough singleton can be used to manage a shared state like the list of subscribers, using DashMap is way better in rust.
 
 #### Reflection Publisher-2
 
