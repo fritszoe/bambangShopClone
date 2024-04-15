@@ -58,12 +58,12 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [X] Commit: `Implement delete function in Subscriber repository.`
     -   [X] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [X] Commit: `Create Notification service struct skeleton.`
+    -   [X] Commit: `Implement subscribe function in Notification service.`
+    -   [X] Commit: `Implement subscribe function in Notification controller.`
+    -   [X] Commit: `Implement unsubscribe function in Notification service.`
+    -   [X] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [X] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -85,4 +85,9 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-2
 
+1. The need to separate the Service and Repository is to comply to the design princples within the MVC, including the Single Responsibility Principle (SRP), this means that we have Separation of Concerns and that each module only have one responsibility, therefore when it needed to be changed, it only changes for a specific reason and by doing so, increases the app's maintanability and flexibility.
+
+2. Program will most likely be the core domain and logic of the app and without the separation with service and controller, program will not only handle data storage but also logics related to the program. For the notification and subscriber, the logics in those two models will most likely intertwined with the ones in the Program, thus making code duplications, furthermore, with no SoC, the code will be much harder to modify therefore making it harder to maintain.
+
+3. Postman can help API testing like shown in this tutorial, postman also makes automation possible, and can generate API documentation from the request we made. 
 #### Reflection Publisher-3
