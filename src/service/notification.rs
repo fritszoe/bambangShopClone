@@ -1,4 +1,4 @@
-use std::thread
+use std::thread;
 
 use bambangshop::{Result, compose_error_response};
 use rocket::http::Status;
