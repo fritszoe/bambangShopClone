@@ -65,11 +65,11 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [X] Commit: `Implement unsubscribe function in Notification controller.`
     -   [X] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
-    -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
-    -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
-    -   [ ] Commit: `Implement publish function in Program service and Program controller.`
-    -   [ ] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [X] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
+    -   [X] Commit: `Implement notify function in Notification service to notify each Subscriber.`
+    -   [X] Commit: `Implement publish function in Program service and Program controller.`
+    -   [X] Commit: `Edit Product service methods to call notify after create/delete.`
+    -   [X] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -91,3 +91,9 @@ This is the place for you to write reflections:
 
 3. Postman can help API testing like shown in this tutorial, postman also makes automation possible, and can generate API documentation from the request we made. 
 #### Reflection Publisher-3
+
+1. In this tutorial we are using the push model, this is because NotificationService pushes data to the subscriber everytime a subscriber uses the update method.
+
+2. By using the pull model, the observer(subscriber) is not constantly polled for new information like the ones happening in the push model, in the pull model, since the observer pulls data from the publisher, observers can choose when do they want to get new information, the disadvantage of using the pull model is that it exposes the Subject to the Observer which could cause security issues and abuse by observers.
+
+3. If we didn't use multi threading, without concurrency there will likely be a performance impact, processes may take longer to complete because it goes sequentially.
